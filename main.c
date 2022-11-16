@@ -1,16 +1,18 @@
 #include "shell.h"
 
 /**
- * main - calls other functions
- * @argc: argument count
- * @argv: argument variables
- * Return: always 0
+ * main - creates a simple shell
+ * @ac: argument count
+ * @av: argument vectors
+ * @env: environmental variables
+ * Return: 0 on success
  */
-
-int main(int argc, char *argv[])
+int main(int ac, char **av, char **env)
 {
-	(void) argc;
-	init_shell(argv);
+	(void)ac;
+	(void)av;
+
+	prompt(env);
 
 	return (0);
 }

@@ -1,23 +1,21 @@
 #include "shell.h"
 
 /**
- * _strcmp - compares two strings
- * @str1: first string
- * @str2: second string
- * Return: 0 if strings are equal; otherwise number greater than 0 if unequal
+ * _strcmp - compare two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: int that tells num spaces in between, 0 if exactly the same string
  */
 
-int _strcmp(char *str1, char *str2)
+int _strcmp(char *s1, char *s2)
 {
-	while (*str1)
-	{
-		if (*str1 != *str2)
-			break;
-	/* move to next characters */
-		str1++;
-		str2++;
-	}
-	/* return difference after converting char* to unsigned char* */
-	return (*(const unsigned char *)str1 - *(const unsigned char *)str2);
-}
+	int i = 0;
 
+	while (*(s1 + i) == *(s2 + i) && *(s1 + i))
+		i++;
+
+	if (*(s2 + i))
+		return (*(s1 + i) - *(s2 + i));
+	else
+		return (0);
+}
