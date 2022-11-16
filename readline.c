@@ -42,6 +42,7 @@ char *read_line(void)
 		string[i] = buffer[i];
 	}
 
+	free(buffer);
 	return (string);
 }
 

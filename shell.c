@@ -6,7 +6,7 @@
  */
 void init_shell(char *argv[])
 {
-	while(1)
+	while (1)
 	{
 		printf("($) ");
 		char *string = read_line();

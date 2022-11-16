@@ -24,7 +24,7 @@ char **split_line(char *string)
 	{
 		tokens[i] = token;
 		i++;
-		
+
 		if (i > buffsize)
 		{
 			buffsize += 64;
